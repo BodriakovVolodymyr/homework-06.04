@@ -5,8 +5,8 @@
 
 int main()
 {
- //   Time_ a;
-	//Time_ b(23, 59, 59, true);
+    Time_ a;
+	Time_ b(23, 59, 59, true);
 
 	//a.showTime();
 	//b.showTime();
@@ -50,10 +50,29 @@ int main()
 
 	//Task2
 
-	Time_ start ( 9,0,0,true);
-	Schedule s(start, 45, 10, 20, 3, 7);
+	//Time_ start ( 9,0,0,true);
+	//Schedule s(start, 45, 10, 20, 3, 7);
 
-	s.generateSchedule();
-	return 0;
+	//s.generateSchedule();
+	//return 0;
+
+
+	//07.04~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+	//Time_ b1 = --b;
+	//b.showTime();
+	//b1.showTime();
+	//cout << "~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~" << endl;
+	//Time_ b2 = b--;
+	//b.showTime();
+	//b2.showTime();
+
+
+	//cout << a << ": " << a + 5 << " = " << 5 + a << endl;
+	//cout << a << ": " << a + 5.0f << " = " << 5.0f + a << endl;
+	//cout << a << ": " << a + 5L << " = " << 5L + a << endl;
+
+
+	//Task2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 }
 

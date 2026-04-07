@@ -287,3 +287,75 @@ Time_ Time_::operator-(long h) const&
 	tmp -= h;
 	return tmp;
 }
+
+Time_& Time_::operator--()
+{
+	this->untickTime();
+	return*this;
+}
+
+Time_ Time_::operator--(int)
+{
+	Time_ tmp = *this;
+	this->untickTime();
+	return tmp;
+}
+
+Time_& Time_::operator++()
+{
+	this->tickTime();
+	return*this;
+}
+
+Time_ Time_::operator++(int)
+{
+	Time_ tmp = *this;
+	this->tickTime();
+	return tmp;
+}
+
+Time_ operator+(int seconds, const Time_& a)
+{
+	return a + seconds;
+}
+
+Time_ operator-(int seconds, const Time_& a)
+{
+	return a - seconds;
+}
+
+Time_ operator+(float minutes, const Time_& a)
+{
+	return a + minutes;
+}
+
+Time_ operator-(float minutes, const Time_& a)
+{
+	return a - minutes;
+}
+
+Time_ operator+(long hours, const Time_& a)
+{
+	return a + hours;
+}
+
+Time_ operator-(long hours, const Time_& a)
+{
+	return a - hours;
+}
+
+ostream& operator<<(ostream& os, const Time_& t)
+{
+	os << t.hour / 10 << t.hour % 10 << "." << t.minutes / 10 << t.minutes % 10 << "." << t.seconds / 10 << t.seconds % 10;
+	return os;
+}
+
+istream& operator>>(istream& is, Time_& t)
+{
+	do {
+		cout << "hh mm ss: ";
+		is >> t.hour >> t.minutes>> t.seconds;
+
+	} while (!t.valid());
+	return is;
+}
