@@ -1,6 +1,6 @@
 
 #include "Time_.h"
-#include "Schedule_.h"
+#include "Schedule.h"
 #include <iostream>
 
 int main()
@@ -50,7 +50,10 @@ int main()
 
 	//Task2
 
-	Schedule a({ 9,0,0 }, 45, 10, 20, 3, 7);
+	Time_ start ( 9,0,0,true);
+	Schedule s(start, 45, 10, 20, 3, 7);
 
+	s.generateSchedule();
+	return 0;
 }
 
