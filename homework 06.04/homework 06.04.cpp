@@ -1,4 +1,4 @@
-
+#include "Bus.h"
 #include "Time_.h"
 #include "Schedule.h"
 #include <iostream>
@@ -74,5 +74,13 @@ int main()
 
 
 	//Task2~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+	
+
+	Bus bus(Time_(6, 0, 0), Time_(11, 0, 0), 30, 10);
+	cout << "Bus schedule: " << endl;
+	bus.generateBus();
+
 }
 

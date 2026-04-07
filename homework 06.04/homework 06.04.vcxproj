@@ -127,12 +127,14 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Bus.cpp" />
     <ClCompile Include="homework 06.04.cpp" />
     <ClCompile Include="Schedule.cpp" />
     <ClCompile Include="Time_.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="ArrayTemplate.h" />
+    <ClInclude Include="Bus.h" />
     <ClInclude Include="Schedule.h" />
     <ClInclude Include="Time_.h" />
   </ItemGroup>

@@ -346,14 +346,16 @@ Time_ operator-(long hours, const Time_& a)
 
 ostream& operator<<(ostream& os, const Time_& t)
 {
-	os << t.hour / 10 << t.hour % 10 << "." << t.minutes / 10 << t.minutes % 10 << "." << t.seconds / 10 << t.seconds % 10;
+	os << (t.hour < 10 ? "0" : "") << t.hour << ":"
+		<< (t.minutes < 10 ? "0" : "") << t.minutes << ":"
+		<< (t.seconds < 10 ? "0" : "") << t.seconds;
 	return os;
 }
 
 istream& operator>>(istream& is, Time_& t)
 {
 	do {
-		cout << "hh mm ss: ";
+		
 		is >> t.hour >> t.minutes>> t.seconds;
 
 	} while (!t.valid());
